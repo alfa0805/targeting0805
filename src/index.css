@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+*{
+  transition: all 0.1s;
+  scroll-behavior: smooth;
+}
+
+ /* header  */
+ .headerbg::before , .headerbg::after{
+    content: '';
+    position: absolute;
+    opacity:100%;
+    left: 0px;
+    top: -2px;
+    background: linear-gradient(90deg,#f2ff00,#057c4a,#3b3907,rgb(107, 7, 7),#3b3907,#057c4a,#f2ff00);
+    background-size: 200%;
+    width: calc(100%);
+    height: calc(89px);
+    z-index: 2;
+    animation: animate 20s linear infinite;
+  
+  }
+  @keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+  }
+  .headerbg::after{
+    filter: blur(10px);
+  } 
+  .headerbgtop::before , .headerbgtop::after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    background: linear-gradient(90deg,#d7e209,#fff701,#09dad7,#06cbf3,#09dad7,#fff701,#d7e209);
+    background-size: 200%;
+    width: calc(100%);
+    height: calc(90px);
+    z-index: 1;
+    animation: animate 20s linear infinite;
+  
+  }
+  @keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+  }
+  .headerbgtop::after{
+    filter: blur(0px);
+  } 
