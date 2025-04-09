@@ -57,7 +57,9 @@ function Content({tun}) {
               <p className={`${tun? "text-white":"text-black"} text-xl font-medium`}> <span className="text-xl font-medium text-[#55b2c2b5]">Murojaatlar soni: </span>{card.number}</p>
             </div>
             <div className="flex gap-1 pt-10">
-              <FaChartPie className="text-amber-300 text-5xl mt-[-6px]"/>
+              <div className="w-[25px] h-[25px] mt-[5px]">
+                <FaChartPie className="text-amber-300 text-2xl text-center "/>
+              </div>
               <p className={`${tun? "text-white":"text-black"} text-xl font-normal`}> <span className="text-xl font-medium text-[#55b2c2b5]">Tahlil: </span>{card.text}</p>
             </div>
           </div>
