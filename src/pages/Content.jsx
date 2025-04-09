@@ -46,7 +46,7 @@ function Content({tun}) {
           shadow-lg w-[85%] h-full p-10 rounded-xl flex items-center justify-between gap-10 max-[770px]:flex-col max-[670px]:w-full`}>
           <div className="w-full">
             <div className="flex items-start gap-2">
-              <FaCircle className="text-amber-300 text-xl"/>
+              <FaCircle className="text-amber-300 text-xl mt-[10px]"/>
               <div className="">
                 <h2 className={`${tun? "text-white":"text-black"} text-5xl font-semibold`}>Target,</h2>
                 <h2 className={`${tun? "text-white":"text-black"} text-5xl inline-block font-semibold`}>reklama</h2>
@@ -57,7 +57,7 @@ function Content({tun}) {
               <p className={`${tun? "text-white":"text-black"} text-xl font-medium`}> <span className="text-xl font-medium text-[#55b2c2b5]">Murojaatlar soni: </span>{card.number}</p>
             </div>
             <div className="flex gap-1 pt-10">
-              <FaChartPie className="text-amber-300 text-5xl"/>
+              <FaChartPie className="text-amber-300 text-5xl mt-[-6px]"/>
               <p className={`${tun? "text-white":"text-black"} text-xl font-normal`}> <span className="text-xl font-medium text-[#55b2c2b5]">Tahlil: </span>{card.text}</p>
             </div>
           </div>
