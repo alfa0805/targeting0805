@@ -24,7 +24,9 @@ function Header({tun, tunbtn }) {
 
             <div className="flex items-center justify-between gap-5 max-[770px]:hidden">
               <button onClick={tunbtn} className={`${tun? "text-amber-400" : "text-black"} border-2 rounded-md p-[1px] cursor-pointer text-3xl text-center font-bold `}>{tun? <MdLightMode /> : <MdNightlight />}</button>
-              <button className="w-[200px] h-[55px] rounded-2xl bg-amber-400 text-xl font-bold cursor-pointer">Ariza yuborish</button>
+              <a href="#aloqa">
+                <button className="w-[200px] h-[55px] rounded-2xl bg-amber-400 text-xl font-bold cursor-pointer">Ariza yuborish</button>
+              </a>
             </div>
 
             <button onClick={modal} 

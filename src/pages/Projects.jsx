@@ -32,8 +32,8 @@ function Projects({tun}) {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-10">
                 {imgs.map((images, index) => (
-                    <div key={index} className="w-[200px] h-[200px] rounded-xl shadow-md shadow-gray-400">
-                        <img src={images.img} alt="img" className="w-full h-full rounded-xl" />
+                    <div key={index} className="w-[200px] h-[200px] p-5 bg-white rounded-xl shadow-md shadow-gray-400">
+                        <img src={images.img} alt="img" className="w-full h-full object-cover  rounded-xl" />
                     </div>
                 ))}
             </div>
