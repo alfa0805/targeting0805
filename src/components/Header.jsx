@@ -47,8 +47,9 @@ function Header({tun, tunbtn }) {
           </div>
           {/* modal */}
           { menu ? 
-            <div className={`${tun? "bg-gray-600" : "bg-gray-100"} p-[10px] absolute w-[220px] right-[3px] top-[103px] rounded-md`}>
-              <ul className="flex flex-col items-center">
+            <div  data-aos="fade-down"
+              className={`${tun? "bg-gray-600 shadow-md shadow-gray-500" : "bg-gray-100 shadow-md"} p-[10px] absolute w-full h-[100vh] left-0 top-[10px]`}>
+              <ul className="flex flex-col items-center gap-10 pt-[79px]">
                 <li className={`${tun? "text-white" : "text-black"} hover:text-amber-500 text-2xl font-bold`}>
                   <button onClick={()=>modal(false)} className="">
                     <a href="#home" className="">Asosiy</a>
@@ -69,7 +70,7 @@ function Header({tun, tunbtn }) {
                 <a href="#aloqa">
                   <button onClick={()=>modal(false)} className="w-[160px] h-[40px] rounded-2xl bg-amber-400 text-lg font-bold cursor-pointer">Ariza yuborish</button>
                 </a>
-                <button onClick={tunbtn} className={`${tun? "text-amber-400" : "text-black"} border-2 rounded-md p-[1px] cursor-pointer text-2xl text-center font-bold `}>{tun? <MdLightMode /> : <MdNightlight />}</button>
+                <button onClick={()=>{tunbtn();modal(false)}} className={`${tun? "text-amber-400" : "text-black"} border-2 rounded-md p-[1px] cursor-pointer text-2xl text-center font-bold `}>{tun? <MdLightMode /> : <MdNightlight />}</button>
               </div>
             </div>
             : ""

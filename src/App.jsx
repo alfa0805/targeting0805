@@ -15,12 +15,29 @@ function App() {
   const tunbtn = () => {
     setTun(!tun)
   }
-      useEffect(() => {
-        AOS.init({
-          duration: 1000, 
-          once: false, 
-        });
-      }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800, 
+      once: false, 
+      easing: "ease-in",
+    });
+  }, []);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 2000);
+  return () => clearTimeout(timer);
+}, []);
+
+if (loading) {
+  return (
+    <div className="w-screen h-screen flex justify-center items-center bg-white dark:bg-gray-800">
+      <div className="w-20 h-20 border-4 border-amber-400 border-dashed rounded-full animate-spin custom-spin" />
+    </div>
+  );  
+}
   return (
     <div className={`${tun? "bg-black" : "bg-white"}`}>
       <Header tun={tun} tunbtn={tunbtn}/>
