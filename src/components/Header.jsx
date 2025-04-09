@@ -66,7 +66,7 @@ function Header({tun, tunbtn }) {
                   </button>
                 </li>
               </ul>
-              <div className="flex items-center flex-col justify-between gap-5 pt-4">
+              <div className="flex items-center flex-col justify-between gap-10 pt-10">
                 <a href="#aloqa">
                   <button onClick={()=>modal(false)} className="w-[160px] h-[40px] rounded-2xl bg-amber-400 text-lg font-bold cursor-pointer">Ariza yuborish</button>
                 </a>
