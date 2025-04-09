@@ -6,12 +6,21 @@ import Content from './pages/Content'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
   const [tun, setTun] = useState(false)
   const tunbtn = () => {
     setTun(!tun)
   }
+      useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: false, 
+        });
+      }, []);
   return (
     <div className={`${tun? "bg-black" : "bg-white"}`}>
       <Header tun={tun} tunbtn={tunbtn}/>

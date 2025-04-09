@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Logo from "../assets/logo.png"
 import { MdLightMode, MdNightlight, MdOutlineMenuBook } from "react-icons/md"
 import { BiSolidFoodMenu } from "react-icons/bi"
@@ -10,11 +10,22 @@ function Header({tun, tunbtn }) {
   const modal = () => {
     setMenu(!menu)
   }
+
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className={`${tun? "headerbg shadow-lg" : "bg-white"} fixed w-full`}>
+    <header className={`${tun? "headerbg shadow-lg" : "bg-white"} fixed w-full z-50 ${scroll ? "shadow-md" : ""}`}>
       <div className={`${tun? "headerbgtop" : "bg-white"} w-full`}>
           {/* container */}
-          <div className="bg-none z-50 max-w-[1100px] h-[90px] mx-auto px-10 flex items-center justify-between relative">
+          <div className="bg-none z-[1000] max-w-[1100px] h-[90px] mx-auto px-10 flex items-center justify-between relative">
             <a href="#" className="">
               <div className="w-[160px] flex items-center justify-between">
                 <img src={Logo} alt="logo" className="w-[80px] h-full"/>

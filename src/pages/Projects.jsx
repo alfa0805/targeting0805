@@ -22,17 +22,17 @@ function Projects({tun}) {
   return (
     <div id="project" className="max-w-[1100px] h-full mx-auto">
         <div className={`${tun?"bg-gray-700 border-[#03606b] shadow-gray-600":"bg-gray-100 border-[#d2d2d2] shadow-[#e0e0e0]"} border-2 shadow-lg rounded-xl p-10 flex flex-col items-center gap-7`}>
-            <h2 className={`${tun?"text-white" : "text-black"} 
+            <h2 data-aos="flip-up" className={`${tun?"text-white" : "text-black"} 
                 text-5xl font-bold max-[770px]:text-3xl text-center`}>
                 BIZNING MIJOZLARIMIZ 
             </h2>
-            <p className={`${tun?"text-white" : "text-black"} text-xl 
+            <p data-aos="flip-up" className={`${tun?"text-white" : "text-black"} text-xl 
                 font-medium max-[770px]:md text-center`}>
                 Bizga ishonch bildirgan kompaniyalar
             </p>
             <div className="flex flex-wrap items-center justify-center gap-10">
                 {imgs.map((images, index) => (
-                    <div key={index} className="w-[200px] h-[200px] p-5 bg-white rounded-xl shadow-md shadow-gray-400">
+                    <div data-aos="zoom-in-up" key={index} className="w-[200px] h-[200px] p-5 bg-white rounded-xl shadow-md shadow-gray-400">
                         <img src={images.img} alt="img" className="w-full h-full object-cover  rounded-xl" />
                     </div>
                 ))}

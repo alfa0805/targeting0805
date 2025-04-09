@@ -50,12 +50,12 @@ function Contact({tun}) {
   return (
   <div className="">
     <div id="aloqa" className="max-w-[1100px] h-full mx-auto py-[120px] px-5 max-[770px]:py-[45px]">
-        <h1 className={`${tun?"text-white":"text-black"} text-4xl font-bold w-[43%]`}>
+        <h1 data-aos="zoom-in-up" className={`${tun?"text-white":"text-black"} text-4xl font-bold w-[43%]`}>
             Sotuvlaringizni oshirishni istaysizmi?
             <span className="text-amber-400"> Bepul audit xizmatimizdan foydalaning!</span>
         </h1>
-        <p className={`${tun?"text-white":"text-black"} text-xl font-medium w-[50%] pt-4`}>Bizning jamoamiz har doim yangi loyihalarga tayyor, so'rov qoldiring va biz tez orada siz bilan bog'lanamiz!</p>
-        <form onSubmit={handleSubmit} className="space-y-1 grid grid-cols-4 gap-5 pt-[90px] max-[890px]:grid-cols-2 max-[770px]:grid-cols-1">
+        <p data-aos="zoom-in-up" className={`${tun?"text-white":"text-black"} text-xl font-medium w-[50%] pt-4`}>Bizning jamoamiz har doim yangi loyihalarga tayyor, so'rov qoldiring va biz tez orada siz bilan bog'lanamiz!</p>
+        <form data-aos="zoom-in-up" onSubmit={handleSubmit} className="space-y-1 grid grid-cols-4 gap-5 pt-[90px] max-[890px]:grid-cols-2 max-[770px]:grid-cols-1">
           <input
             type="text"
             name="name"

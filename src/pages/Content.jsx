@@ -40,9 +40,9 @@ function Content({tun}) {
 
   return (
     <div id="loyihalar" className="max-w-[1100px] h-full py-14 mx-auto px-5 flex flex-col items-center gap-10">
-      <h1 className={`${tun?"text-white" : "text-black"} text-5xl font-semibold pb-10`}>LOYIHALAR</h1>
+      <h1 data-aos="flip-up" className={`${tun?"text-white" : "text-black"} text-5xl font-semibold pb-10`}>LOYIHALAR</h1>
       { cards.map((card , index) => (
-        <div key={index} className={`${tun?"bg-gray-700 shadow-gray-600" : "bg-gray-100 shadow-[#dbdbdb]"} 
+        <div data-aos="zoom-in" data-aos-duration="1600" key={index} className={`${tun?"bg-gray-700 shadow-gray-600" : "bg-gray-100 shadow-[#dbdbdb]"} 
           shadow-lg w-[85%] h-full p-10 rounded-xl flex items-center justify-between gap-10 max-[770px]:flex-col max-[670px]:w-full`}>
           <div className="w-full">
             <div className="flex items-start gap-2">
